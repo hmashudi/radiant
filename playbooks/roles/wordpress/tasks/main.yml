@@ -1,0 +1,21 @@
+- name: create new database for wordpress
+  mysql_db: name=wordpress state=present
+  tags: wordpress
+
+- name: create db user and grant to wordpress db
+  mysql_user: name=user password=12345 priv=wordpress.*:ALL,GRANT state=present
+  tags: wordpress
+
+- name: download latest stable version of wordpress
+  get_url: url=http://wordpress.org/latest.tar.gz dest=/home/vagrant/latest.tar.gz
+  tags: wordpress
+
+- name: un-achive wordpress package
+  unarchive: src=/home/vagrant/latest.tar.gz dest=/home/vagrant copy=no
+  tags: wordpress
+
+- name: copy basic configuration of wordpress
+  copy: src=wp-config.php dest=/home/vagrant/wordpress/wp-config.php
+  tags: wordpress
+
+- name: 
