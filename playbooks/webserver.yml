@@ -1,0 +1,7 @@
+- name: building webserver for wordpress
+  user: vagrant
+  hosts: all
+  sudo: yes
+
+  roles:
+    - { role: "base" }

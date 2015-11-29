@@ -1,0 +1,7 @@
+- name: add local repo to apt sources list
+  copy: src=sources.list dest=/etc/apt/sources.list owner=root group=root
+  tags: base
+
+- name: update apt cache and upgrade to latest packages
+  apt: update_cache=yes upgrade=yes
+  tags: base

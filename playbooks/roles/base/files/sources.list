@@ -1,0 +1,4 @@
+deb http://kambing.ui.ac.id/ubuntu trusty main universe multiverse restricted
+deb http://kambing.ui.ac.id/ubuntu trusty-updates main universe multiverse restricted
+deb http://kambing.ui.ac.id/ubuntu trusty-security main universe multiverse restricted
+

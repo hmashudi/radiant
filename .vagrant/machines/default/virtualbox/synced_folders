@@ -1,0 +1,1 @@
+{"nfs":{"/radiant":{"disabled":false,"type":"nfs","guestpath":"/radiant","hostpath":"/home/hofid/Workspace/radiant","map_uid":1000,"map_gid":1000,"nfs_udp":true,"nfs_version":3,"uuid":"3372482759","linux__nfs_options":["rw","no_subtree_check","all_squash","anonuid=1000","anongid=1000","fsid=3372482759"]}}}
