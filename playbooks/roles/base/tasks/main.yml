@@ -5,3 +5,16 @@
 - name: update apt cache and upgrade to latest packages
   apt: update_cache=yes upgrade=yes
   tags: base
+
+- name: install required packages for wordpress
+  apt: name={{ item }}
+  with_items:
+    - nginx
+    - php5-fpm
+    - mariadb-server
+    - python-mysqldb
+  tags: base
+
+- name: copy basic default configuration of nginx for php5-fpm
+  copy: src=default dest=/etc/nginx/sites-available/default owner=root group=root
+  tags: base
