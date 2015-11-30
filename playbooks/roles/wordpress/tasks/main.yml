@@ -17,5 +17,3 @@
 - name: copy basic configuration of wordpress
   copy: src=wp-config.php dest=/home/vagrant/wordpress/wp-config.php
   tags: wordpress
-
-- name: 

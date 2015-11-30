@@ -17,4 +17,5 @@
 
 - name: copy basic default configuration of nginx for php5-fpm
   copy: src=default dest=/etc/nginx/sites-available/default owner=root group=root
+  notify: restart nginx
   tags: base
